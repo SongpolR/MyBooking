@@ -20,6 +20,11 @@ concurrency:
   group: 'pages'
   cancel-in-progress: true
 
+#Allow repo secrets
+env:
+  VITE_LIFF_ID: ${{ secrets.VITE_LIFF_ID }}
+  VITE_LIFF_REDIRECT_URI: ${{ secrets.VITE_LIFF_REDIRECT_URI }}
+
 jobs:
   # Single deploy job since we're just deploying
   deploy:
@@ -39,9 +44,6 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-        env:
-          VITE_LIFF_ID: ${{ secrets.VITE_LIFF_ID }}
-          VITE_LIFF_REDIRECT_URI: ${{ secrets.VITE_LIFF_REDIRECT_URI }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
