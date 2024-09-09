@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npm run build
+        run: vite build
         env:
           VITE_LIFF_ID: ${{ secrets.VITE_LIFF_ID }}
           VITE_LIFF_REDIRECT_URI: ${{ secrets.VITE_LIFF_REDIRECT_URI }}
