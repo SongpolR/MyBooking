@@ -11,7 +11,7 @@ export const useLiffStore = defineStore('liff', () => {
       if (liff.isLoggedIn()) {
         profile.value = await liff.getProfile()
       } else {
-        liff.login({ redirectUri: import.meta.env.VITE_LIFF_REDIRECT_URI })
+        liff.login({ redirectUri: 'https://songpolr.github.io/MyBooking/' })
       }
     })
     await liff.init({ liffId: import.meta.env.VITE_LIFF_ID })

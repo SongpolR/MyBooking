@@ -1,5 +1,4 @@
 import type { Moment } from 'moment'
-import moment from 'moment'
 import { Instructor } from './instructor'
 
 // TODO: Map with possible values from API
