@@ -14,7 +14,7 @@ export const useLiffStore = defineStore('liff', () => {
         liff.login({ redirectUri: 'https://songpolr.github.io/MyBooking/' })
       }
     })
-    await liff.init({ liffId: import.meta.env.VITE_LIFF_ID })
+    await liff.init({ liffId: '2006268278-e7G7G7Zk' })
   }
 
   return { profile, init }
