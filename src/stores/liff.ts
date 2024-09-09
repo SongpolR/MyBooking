@@ -6,6 +6,7 @@ export const useLiffStore = defineStore('liff', () => {
   const profile = ref()
 
   async function init() {
+    console.log(import.meta.env.VITE_LIFF_ID)
     liff.ready.then(async () => {
       if (liff.isLoggedIn()) {
         profile.value = await liff.getProfile()
